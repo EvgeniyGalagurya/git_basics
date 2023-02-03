@@ -62,16 +62,16 @@ def main(args):
     # percent = float(args[1])
     # ...
 
-    res = deposit(initial_sum, percent, fixed_period, set_period)
-    res_10 = deposit(initial_sum, percent, fixed_period, 10)
-    res_5 = deposit(initial_sum, percent, fixed_period, 5)
+    #res = deposit(initial_sum, percent, fixed_period, set_period)
+    #res_10 = deposit(initial_sum, percent, fixed_period, 10)
+    #res_5 = deposit(initial_sum, percent, fixed_period, 5)
     res_1 = deposit(initial_sum, percent, fixed_period, 1)
-    res_1m = deposit(initial_sum, percent, fixed_period, (1/12))
-    print(res)
-    print('You get from 10 year', res_10)
-    print('You get from 5 year', res_5)
+    #res_1m = deposit(initial_sum, percent, fixed_period, (1/12))
+    #print(res)
+    #print('You get from 10 year', res_10)
+    #print('You get from 5 year', res_5)
     print('You get from 1 year', res_1)
-    print('You get from 1 month', res_1m)
+    #print('You get from 1 month', res_1m)
 
 
 if __name__ == '__main__':
