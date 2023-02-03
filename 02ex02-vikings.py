@@ -9,8 +9,8 @@ https://www.youtube.com/watch?v=zLih-WQwBSc
 import random
 
 DEF_CHOICE = 8      # how many times to repeat a dish
-MENU = ['spam', 'egg', 'sausage', 'bacon']  # that's all combinations
-MENU_MULTI = MENU + ['eggs', 'sausages']    # including plurals
+MENU = ['spam', 'egg', 'sausage', 'bacon', 'bear']  # that's all combinations
+MENU_MULTI = MENU + ['eggs', 'sausages', 'barbecue']    # including plurals
 JOINTS = [', and ', ', ', ' and ', ' with ', ' and double portion of ']
 PREFERED = MENU[0]  # that's what promoted most
 FORBIDDEN = {'not', 'without', 'no'}
