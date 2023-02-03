@@ -35,42 +35,42 @@ TOTAL = SUM * ((1 + p) ** (SET_PERIOD / FIXED_PERIOD))
 #       not known at the moment the script is run
 
 
-USAGE = """USAGE: {script} initial_sum percent fixed_period set_period
+USAGE = """USAGE: {script} percent fixed_period set_period
 
 \tCalculate deposit yield. See script source for more details.
 """
 USAGE = USAGE.strip()
 
 
-def deposit(initial_sum, percent, fixed_period, set_period):
+def deposit(percent, fixed_period, set_period):
     """Calculate deposit yield."""
     per = percent / 100
     growth = (1 + per) ** (set_period / fixed_period)
-    return initial_sum * growth
+    return growth
 
 
 def main(args):
     """Gets called when run as a script."""
-    if len(args) != 4 + 1:
+    if len(args) != 3 + 1:
         exit(USAGE.format(script=args[0]))
 
     args = args[1:]
-    initial_sum, percent, fixed_period, set_period = map(float, args)
+    percent, fixed_period, set_period = map(float, args)
 
     # same as
     # initial_sum = float(args[0])
     # percent = float(args[1])
     # ...
 
-    #res = deposit(initial_sum, percent, fixed_period, set_period)
+    res = deposit(percent, fixed_period, set_period)
     #res_10 = deposit(initial_sum, percent, fixed_period, 10)
     #res_5 = deposit(initial_sum, percent, fixed_period, 5)
-    res_1 = deposit(initial_sum, percent, fixed_period, 1)
+    #res_1 = deposit(initial_sum, percent, fixed_period, 1)
     #res_1m = deposit(initial_sum, percent, fixed_period, (1/12))
-    #print(res)
+    print(res)
     #print('You get from 10 year', res_10)
     #print('You get from 5 year', res_5)
-    print('You get from 1 year', res_1)
+    #print('You get from 1 year', res_1)
     #print('You get from 1 month', res_1m)
 
 
